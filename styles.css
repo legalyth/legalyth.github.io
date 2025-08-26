@@ -1,28 +1,14 @@
 /* ====== THEME TOKENS ====== */
 :root {
-  /* LIGHT (défaut) */
-  --bg: #f3f4f6;
-  --surface: #ffffff;
-  --card: #ffffff;
+  --bg: #fff;           /* Fond général blanc */
+  --surface: #fff;      /* Fond des éléments (header, boutons) blanc */
+  --card: #fff;         /* Fond des cards blanc */
   --border: #e5e7eb;
-  --text: #0f172a;
+  --text: #0f172a;      /* Texte foncé */
   --muted: #4b5563;
   --accent: #2563eb;
   --accent-2: #0ea5e9;
   --shadow: 0 10px 30px rgba(2, 6, 23, .08);
-}
-
-:root[data-theme="dark"] {
-  /* DARK */
-  --bg: #0b1220;
-  --surface: rgba(17, 24, 39, .7);
-  --card: #101827;
-  --border: #1f2937;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #60a5fa;
-  --accent-2: #7dd3fc;
-  --shadow: 0 14px 34px rgba(0,0,0,.35);
 }
 
 /* Respecte le thème système au premier chargement si aucun choix enregistré */
@@ -45,8 +31,7 @@
 html, body { margin: 0; padding: 0; }
 body {
   font: 16px/1.7 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(1200px 700px at 20% -10%, color-mix(in oklch, var(--bg), black 4%), var(--bg) 60%);
+  background: var(--bg); /* Fond blanc */
   color: var(--text);
 }
 .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
@@ -60,7 +45,7 @@ p, li { color: var(--text); }
 /* ====== HEADER / NAV ====== */
 .header {
   position: sticky; top: 0; z-index: 20;
-  background: var(--surface);
+  background: var(--surface); /* Header blanc */
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -89,14 +74,13 @@ p, li { color: var(--text); }
 /* ====== CARDS / GRID ====== */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
 .card {
-  background:
-    radial-gradient(800px 400px at 20% -10%, color-mix(in oklch, var(--accent), transparent 88%), transparent 50%),
-    var(--card);
+  background: var(--card); /* Card blanche */
   border: 1px solid var(--border);
-  border-radius: 16px; padding: 22px;
-  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease;
+  border-radius: 16px;
+  padding: 22px;
   box-shadow: var(--shadow);
   margin-bottom: 24px;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease;
 }
 .card:hover { transform: translateY(-3px); border-color: color-mix(in oklch, var(--accent), var(--border)); }
 
@@ -110,13 +94,17 @@ p, li { color: var(--text); }
 /* ====== BUTTONS ====== */
 .btn {
   display: inline-block; padding: 10px 14px; border-radius: 12px;
-  border: 1px solid var(--border); background: var(--surface);
-  color: var(--text); text-decoration: none; transition: .2s;
+  background: var(--surface); /* Bouton blanc */
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: .2s;
 }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
 .btn.primary {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  border: 0; color: white; font-weight: 700;
+  color: white;
+  border: 0;
+  font-weight: 700;
 }
 
 /* ====== TIMELINE (si utilisée) ====== */

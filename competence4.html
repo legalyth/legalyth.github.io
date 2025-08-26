@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compétence 4 – Gérer des données</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+
+      <!-- Bloc brand + toggle -->
+      <div style="display:flex; align-items:center; gap:10px; margin-right:auto;">
+        <a class="brand" href="index.html">Khemra CHEAV</a>
+        <!-- Toggle thème -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Basculer le thème" title="Basculer le thème">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5L19 19M5 19l-1.5 1.5M20.5 3.5L19 5"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Liens de navigation -->
+      <a href="index.html">Accueil</a>
+      <a href="competence4.html">Compétence 4</a>
+      <a href="competence5.html">Compétence 5</a>
+      <a href="competence6.html">Compétence 6</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <div class="card">
+      <h1>Compétence 4 — Gérer des données de l’information</h1>
+      <p class="muted"> Cette compétence consiste à savoir administrer, modéliser, sécuriser et exploiter des données 
+    pour répondre à des besoins métiers. Elle implique aussi bien des aspects techniques 
+    que des aspects stratégiques (aider à la décision, garantir la fiabilité et la traçabilité des informations).
+</p>
+    </div>
+
+    <div class="card">
+      <h2>Preuve 1 — EcoTracker (SAE 6.01)</h2>
+      <ul>
+        <li>Scraping de données via API & bases externes, pipeline d’ingestion.</li>
+        <li>Conception <strong>MongoDB</strong> (collections, index, agrégations).</li>
+        <li>Site d’aide à la décision (transport, météo, lieu optimal).</li>
+      </ul>
+      <div style="margin-top:15px;">
+        <figure style="margin:0 0 20px 0;">
+          <img src="Image/Ecotracker_1.png" alt="Schéma MongoDB EcoTracker" 
+               style="width:30%; max-width:600px; display:block; margin:auto; border-radius:12px; border:1px solid var(--border);">
+          <figcaption style="font-size:14px; color:var(--muted); margin-top:6px; text-align:center;">
+            Schéma des collections MongoDB
+          </figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <img src="Image/Ecotracker_2.png" alt="Interface EcoTracker" 
+               style="width:100%; max-width:1000px; display:block; margin:auto; border-radius:12px; border:1px solid var(--border);">
+          <figcaption style="font-size:14px; color:var(--muted); margin-top:6px; text-align:center;">
+            Interface de l’outil EcoTracker
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Preuve 2 — AF-Stats Builder (alternance)</h2>
+      <ul>
+        <li>Pipelines Python (extraction, transformation, export Excel).</li>
+        <li>Normalisation O&D, cas Paris/DOM-TOM, Annexe C, calcul CA net.</li>
+        <li>Logs et fiabilité (qualité, reprises sur erreur).</li>
+      </ul>
+      <div style="margin-top:15px;">
+        <figure style="margin:0 0 20px 0;">
+          <img src="Image/AF_Stats.png" alt="Schéma pipeline AF-Stats Builder" 
+               style="width:30%; max-width:600px; display:block; margin:auto; border-radius:12px; border:1px solid var(--border);">
+          <figcaption style="font-size:14px; color:var(--muted); margin-top:6px; text-align:center;">
+            Schéma du pipeline ETL
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Leçons & réflexivité</h2>
+      <p>Grâce à ces projets, j’ai appris à manipuler des données issues de sources variées, à les transformer et à les structurer dans des bases adaptées.
+J’ai compris l’importance de la qualité et de la traçabilité des données pour garantir des résultats fiables.
+Ce travail m’a aussi sensibilisé à la robustesse des pipelines de données, et à l’importance de l’automatisation des traitements.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container">© 2025 Khemra</div></footer>
+</body>
+<script defer src="theme.js"></script>
+</html>
